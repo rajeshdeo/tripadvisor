@@ -1,17 +1,16 @@
+import "./App.css";
+import AllRoutes from "./Componnts/AllRoutes";
 
-import './App.css';
-import AllRoutes from './Componnts/AllRoutes';
-import Navbar from './Componnts/Navbar';
+
+import Navbar from "./Componnts/Navbar";
 
 function App() {
   return (
-   
-      <div>
+    <div>
+      <Navbar />
+      <AllRoutes />
       
-        <Navbar />
-        <AllRoutes />
-      </div>
-    
+    </div>
   );
 }
 

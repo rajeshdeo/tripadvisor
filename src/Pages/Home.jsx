@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Grid, GridItem, Image, Text } from '@chakra-ui/react'
+import Carousels from '../Componnts/Carousels';
 const Home = () => {
   return (
     <div>
@@ -75,6 +76,8 @@ const Home = () => {
         <Box boxSize='85%'  margin={"auto"} paddingLeft={"10px"}>
             <Image src='https://static.tacdn.com/img2/brand/home/homemar2022_dt_trans.webp' alt='first_Image' />
         </Box>
+
+        <Carousels />
     </div>
   )
 }

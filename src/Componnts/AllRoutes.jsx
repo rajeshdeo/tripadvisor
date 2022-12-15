@@ -5,7 +5,7 @@ import Home from '../Pages/Home'
 const AllRoutes = () => {
   return (
     <div>
-        <Routes>
+      <Routes>
             <Route path="/" element={<Home />}/>
         </Routes>
     </div>
