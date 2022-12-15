@@ -13,7 +13,7 @@ function Carousels() {
     <Box width={"85%"}    margin={'auto'} marginTop='80px' marginBottom='80px'>
       <Heading size='lg'>Top experiences on Tripadvisor</Heading>
       <p>The best tours, activities and tickets</p><br/>
-    <Carousel  onSelect={handleSelect} controls= "true" width='50px'>
+    <Carousel  onSelect={handleSelect} controls= "true" width='50px' >
       <Carousel.Item   >
         
         <Grid templateColumns='repeat(4, 1fr)' gap={6}   margin="auto" cursor={'pointer'}>
