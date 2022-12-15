@@ -72,7 +72,7 @@ const Home = () => {
             
             
         </Grid>
-        <Box boxSize='85%'  margin={"auto"} paddingLeft={"10px"}>
+        <Box boxSize='85%'  margin={"auto"} paddingLeft={"10px"} gap={"0"}>
             <Image src='https://static.tacdn.com/img2/brand/home/homemar2022_dt_trans.webp' alt='first_Image' />
         </Box>
     </div>
