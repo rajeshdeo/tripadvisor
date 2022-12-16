@@ -1,4 +1,4 @@
-import { Box, filter, Grid, GridItem, Heading, Image } from '@chakra-ui/react';
+import { Box, Grid, GridItem, Heading, Image } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 

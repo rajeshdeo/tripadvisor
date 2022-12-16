@@ -1,9 +1,12 @@
 import React from "react";
 import { Box, Button, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
 import Carousels from "../Componnts/Carousels";
-import { darken, whiten } from "@chakra-ui/theme-tools";
+
 import ImageCarousel from "../Componnts/ImageCarousel";
 import MoretoExploreCarousel from "../Componnts/MoretoExploreCarousel";
+import TopDestinationBeachLoverCarousel from "../Componnts/TopDestinationBeachLoverCarousel";
+import HomeRenter from "../Componnts/HomeRenter";
+import Footer from "./Footer";
 const Home = () => {
   return (
     <div>
@@ -205,6 +208,26 @@ const Home = () => {
 
       <ImageCarousel />
       <MoretoExploreCarousel />
+      <TopDestinationBeachLoverCarousel />
+      <HomeRenter />
+
+      <Box  width={"100%"} bgColor="#004f32"  padding="50px" marginBottom="80px">
+        <Box width="80%" display="flex" margin="auto">
+          <Box width="20%" paddingTop="20px" paddingBottom="150px" textAlign={"center"} marginRight="50px">
+                <img src="https://static.tacdn.com/img2/travelers_choice/TC_logomark_solid_cream.svg" alt="logo"/>
+                <Heading color="white" size="lg" margin="20px">Travellers' Choice Best of the Best</Heading>
+                <Button color="white" bgColor="black" borderRadius={"50px"} marginTop="50px"
+                _hover={{
+                  filter:"opacity(90%)"
+                }}>See the winners</Button>
+          </Box>
+          <Box width="80%" backgroundImage={"https://static.tacdn.com/img2/brand/feed/tc_cards_tablet.jpeg"}>
+                
+          </Box>
+        </Box>
+      </Box>
+
+      <Footer />
     </div>
   );
 };
