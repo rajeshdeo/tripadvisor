@@ -16,7 +16,7 @@ import {
   InputRightElement,
   FormLabel
 } from "@chakra-ui/react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 // const CFaUserAlt = chakra(FaUserAlt);
@@ -28,6 +28,8 @@ const SignUp = () => {
     const [lname,setLname]= useState("");
     const [email,setEmail]= useState("");
     const [password,setPassword]= useState("");
+        const navigate= useNavigate(); 
+    
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowClick = () => setShowPassword(!showPassword);
@@ -50,7 +52,7 @@ const SignUp = () => {
         })
         let result= await res.json();
         console.log(result);
-        <Navigate to="/login" />
+        navigate("/login");
     }catch(err){
         console.log(err);
     }
