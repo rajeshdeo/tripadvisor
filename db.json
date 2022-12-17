@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signup": [
+    {
+      "id": "0.7601106443831134",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "0.6526941665606809",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "0.8355119219403573",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "0.16164473983253203",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "0.14055941975376185",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "0.2993905871388076",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "0.1194093757344803",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "0.17787772404708968",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "0.24994862679934826",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "0.3091171101790533",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "password": ""
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
