@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Heading, Text } from '@chakra-ui/react';
+import { Box, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/react';
 import Carousel from 'react-bootstrap/Carousel';
 
 function MoretoExploreCarousel() {
@@ -94,7 +94,7 @@ function MoretoExploreCarousel() {
             filter:"opacity(90%)",
             textDecoration:"underline"
         }} bgColor="white" >
-             <img  className="d-block "
+             <Image  className="d-block " boxSize={"210px"} width="100%"
           src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/ff/6a/6a/28de9140-040f-453f.jpg?w=400&h=-1&s=1"
           alt="Third slide"
         
@@ -106,7 +106,7 @@ function MoretoExploreCarousel() {
             filter:"opacity(90%)",
             textDecoration:"underline"
         }} bgColor="white" > 
-        <img className="d-block "
+        <Image className="d-block " boxSize={"210px"} width="100%"
           src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/ff/6c/a6/fd1cbde3-5e7e-4084.jpg?w=400&h=-1&s=1"
           alt="Fourth slide"
          

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
   Flex,
   Heading,
@@ -13,17 +13,62 @@ import {
   Avatar,
   FormControl,
   FormHelperText,
-  InputRightElement
+  InputRightElement,
+  useConst
 } from "@chakra-ui/react";
 import { FaUserAlt, FaLock } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContext";
 // const CFaUserAlt = chakra(FaUserAlt);
 // const CFaLock = chakra(FaLock);
 
 const Login = () => {
+
+  const [email,setEmail]= useState("");
+  const [password,setPassword] = useState("");
+  const navigate= useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  // const {isAuth}= useContext(AuthContext);
 
   const handleShowClick = () => setShowPassword(!showPassword);
+  const handleLogin= async(e)=>{
+    e.preventDefault();
+    
+    // console.log(item);
+    let item={
+      email,password
+    }
+   // console.log(item);
+    try{
+    let res= await fetch("http://localhost:3004/signup",{
+            method:"GET",
+           
+            headers:{
+                "Content-Type":"application/json",
+            }
+    })
+    let result= await res.json();
+    let flag=false;
+    for(let i=0;i<result.length;i++)
+    {
+      if(result[i].email===item.email && result[i].password===item.password)
+      {
+              flag=true ;  
+             
+      }
+    }
+      if(flag===true)
+      {
+        navigate("/")
+      }
+      else{
+        alert("Wrong Credentials !")
+      }
+    // navigate("/")
+}catch(err){
+    console.log(err);
+}
+}
 
   return (
     <Flex
@@ -56,7 +101,8 @@ const Login = () => {
                     pointerEvents="none"
                     children={<FaUserAlt color="gray.300" />}
                   />
-                  <Input type="email" placeholder="email address" required/>
+                  <Input type="email" placeholder="email address" value={email}
+                    onChange={(e)=>setEmail(e.target.value)} required/>
                 </InputGroup>
               </FormControl>
               <FormControl>
@@ -68,7 +114,8 @@ const Login = () => {
                   />
                   <Input
                     type={showPassword ? "text" : "password"}
-                    placeholder="Password" required
+                    placeholder="Password" value={password}
+                    onChange={(e)=>setPassword(e.target.value)} required
                   />
                   <InputRightElement width="4.5rem">
                     <Button h="1.75rem" size="sm" onClick={handleShowClick}>
@@ -86,6 +133,7 @@ const Login = () => {
                 variant="solid"
                 colorScheme="teal"
                 width="full"
+                onClick={handleLogin}
               >
                 Login
               </Button>

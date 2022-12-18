@@ -13,9 +13,13 @@ import {
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import tripadvisor from "../tripadvisor.png";
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../Context/AuthContext';
 
 
 export default function Navbar() {
+  // const {isAuth}= useContext(AuthContext);
+  // console.log(isAuth)
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -47,22 +51,31 @@ export default function Navbar() {
                         Alerts
                     </h3>
                 </Button>
+
+              
                 <Link to="/login"><Button
                 bgColor={"black"} gap={"10px"}
                 color={"white"}
                 _hover={{
                   backgroundColor:"gray.300",
                   color:"teal"
-                }}>Login</Button></Link>
+                }} >Login</Button></Link>
                     
                    
-                
-                <Button bgColor={"white"} gap={"10px"}>
+                    <Link to="/"><Button
+                bgColor={"black"} gap={"10px"}
+                color={"white"}
+                _hover={{
+                  backgroundColor:"gray.300",
+                  color:"teal"
+                }}>Log out</Button></Link>
+
+                {/* <Button bgColor={"white"} gap={"10px"}>
                 <svg viewBox="0 0 24 24" width="20px" height="20px" padding-right="10px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 4.75H2v-1.5h2.5c.779 0 1.354.398 1.71.844.339.423.54.959.54 1.406v.25h14.71l-1.874 7.5H6.75v1.25c0 .29.164.76.475 1.175.327.436.632.575.775.575h9a2.75 2.75 0 11-2.45 1.5h-3.1a2.75 2.75 0 11-4.645-.407c-.314-.219-.578-.499-.78-.768-.439-.585-.775-1.365-.775-2.075v-9a.95.95 0 00-.21-.469c-.144-.179-.319-.281-.54-.281zm4.5 13a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zm8 0a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zm-10.25-6h11.664l1.125-4.5H6.75v4.5z"></path></svg>
                     <h3>
                        Basket
                     </h3>
-                </Button>
+                </Button> */}
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
               <Button onClick={toggleColorMode}>

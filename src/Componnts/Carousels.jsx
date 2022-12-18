@@ -1,13 +1,18 @@
 import { Box, Grid, GridItem, Heading, Image } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import { Link} from 'react-router-dom';
 
 function Carousels() {
   const [index, setIndex] = useState(0);
+  
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
+
+   
   };
+  
 
   return (
     <Box width={"85%"}    margin={'auto'} marginTop='80px' marginBottom='80px'>
@@ -17,20 +22,22 @@ function Carousels() {
       <Carousel.Item   >
         
         <Grid templateColumns='repeat(4, 1fr)' gap={6}   margin="auto" cursor={'pointer'}>
-          <GridItem 
+        <Link to= "/gaya">
+          <GridItem  
           _hover={{
             textDecoration:"underline",
             // webkitFilter:"blur(0.6px)",
-            filter:"opacity(80%)"
+            filter:"opacity(80%)",
+            color:"black"
           }}>
             
-          <Image src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/65/66/4a/caption.jpg?w=300&h=300&s=1"
+          <Image boxSize={"268px"}  src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/38/28/50.jpg"
           alt="First slide"/>
         <br/>
-          <Heading size='md'>Ubud Tour - Best of Ubud -All Inclusive</Heading>
-          <p>from ₹7,620 per adult</p>
-        
-          </GridItem>
+          <Heading size='md'>Buddhist Tour From The Birth To Death</Heading>
+          <p>from ₹1,33,524 per adult</p>
+          
+          </GridItem></Link>
 
           <GridItem  _hover={{
             textDecoration:"underline",
