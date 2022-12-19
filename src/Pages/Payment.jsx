@@ -35,8 +35,8 @@ import {
 
     const [fname,setFname]= useState("");
     
-    const [email,setEmail]= useState("");
-    const [password,setPassword]= useState("");
+    const [card,setCard]= useState("");
+    const [cvv,setCvv]= useState("");
     const navigate= useNavigate();
 
     const handleClick =()=>{
@@ -86,7 +86,7 @@ import {
             <FormLabel>Credit/Debit card number</FormLabel>
               <InputGroup>
              
-                <Input type="number" placeholder="" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
+                <Input type="number" placeholder="" value={card} onChange={(e)=>setCard(e.target.value)} maxLength="16" required/>
                 
               </InputGroup>
             </FormControl>
@@ -138,8 +138,7 @@ import {
                         
                             <Input
                             type={"password"}
-                            placeholder=""  value={password} onChange={(e)=>setPassword(e.target.value)}required
-                            />
+                            placeholder=""  value={cvv} onChange={(e)=>setCvv(e.target.value)}required maxLength="3" />
                             {/* <InputRightElement width="4.5rem">
                             <Button h="1.75rem" size="sm" onClick={handleShowClick}>
                                 {showPassword ? "Hide" : "Show"}

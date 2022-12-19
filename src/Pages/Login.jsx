@@ -141,12 +141,12 @@ const Login = () => {
           </form>
         </Box>
       </Stack>
-      <Box>
+     <Link to="/signup"><Box>
         New to us?{" "}
         <Link color="teal.500" href="/signUp">
           Sign Up
         </Link>
-      </Box>
+      </Box></Link> 
     </Flex>
   );
 };
